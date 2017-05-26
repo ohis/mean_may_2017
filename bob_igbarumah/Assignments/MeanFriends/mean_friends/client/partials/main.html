@@ -1,0 +1,22 @@
+am in mainnn
+<div ng-init="FC.index()">
+
+  <table> <input placeholder="Birthday..." type="text" ng-model="filter_birthday">
+    <tr>
+      <th>Name</th>
+      <th>Show</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+
+    <tr ng-repeat="friend in FC.friends | filter: filter_birthday | orderBy:'birthday'">
+      <td>{{friend.first_name}}  {{friend.last_name}}</td>
+      <td><a href="#!/show/{{friend._id}}">Show</a></td>
+      <td><a href="#!/edit/{{friend._id}}" >Update</a></td>
+        <td><a href="#" ng-click="FC.delete(friend._id)" >Delete</a></td>
+    </tr>
+  </table>
+   <br>
+   <br>
+    <button type="button"><a href="#!/new">New Friend</a></button>
+</div>

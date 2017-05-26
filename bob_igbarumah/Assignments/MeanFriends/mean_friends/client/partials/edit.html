@@ -1,0 +1,26 @@
+<div ng-init="FC.show()">
+  <form>
+    First Name: <input type="text" ng-model="FC.friend.first_name">
+    <br>
+    <br>
+    Last Name: <input type="text" ng-model="FC.friend.last_name">
+    <br>
+    Birthday: <input type="text" ng-model="FC.friend.birthday">
+  </form>
+   <br>
+   <br>
+   <form>
+     First Name:<input type="text" ng-model="FC.editFriend.first_name">
+     <br>
+     <br>
+     Last Name:<input type="text" ng-model="FC.editFriend.last_name">
+     <br>
+     <br>
+     Birthday:<input type="date" ng-model="FC.editFriend.birthday">
+     <br>
+     <br>
+     <input type="submit" ng-click="FC.edit(FC.editFriend)">
+
+   </form>
+
+</div>
